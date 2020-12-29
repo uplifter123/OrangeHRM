@@ -6,7 +6,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
 public class AdminJobTitleSearchStepDef {
     AdminJobTitlesPage adminJobTitlesPage =new AdminJobTitlesPage();
@@ -30,10 +29,10 @@ public class AdminJobTitleSearchStepDef {
     public void theUserFindFromTheTable(String title) {
 
 
-        Select select = new Select(adminJobTitlesPage.selectDropdownlistButton);
-        Driver.wait(2);
-        select.selectByValue("10");
-        System.out.println("Secili Kisim : "+ select.getFirstSelectedOption().getText());
+//        Select select = new Select(adminJobTitlesPage.selectDropdownlistButton);
+//        Driver.wait(2);
+//        select.selectByValue("10");
+//        System.out.println("Secili Kisim : "+ select.getFirstSelectedOption().getText());
 
 //
 //
