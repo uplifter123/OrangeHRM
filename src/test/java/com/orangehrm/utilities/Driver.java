@@ -94,6 +94,11 @@ public class Driver {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
     }
+
+    public static void hoverClick(WebElement element) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(element).click().perform();
+    }
     /**
      * return a list of string from a list of elements ignores any element with no
      * text

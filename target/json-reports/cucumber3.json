@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-12-04T12:27:01.364Z",
+        "start_timestamp": "2020-12-29T13:57:50.343Z",
         "before": [
           {
             "result": {
-              "duration": 4000000,
+              "duration": 1007000,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 534000000,
+              "duration": 1444622000,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 12214000000,
+              "duration": 9185339000,
               "status": "passed"
             },
             "line": 4,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 5029000000,
+              "duration": 6568081000,
               "status": "passed"
             },
             "line": 5,
