@@ -27,6 +27,11 @@ public class AdminJobTitlesPage {
     @FindBy(xpath= "//i[.='chevron_left']")
     public WebElement arrowLeftButton;
 
+    @FindBy(xpath = "//td[@class='cursor-pointer']//span[.='IT Manager']")
+public WebElement ItManagerJobTitle;
+
+    @FindBy(xpath= "//input[@class='select-dropdown']")
+    public WebElement selectDropdown;
 
 
 
