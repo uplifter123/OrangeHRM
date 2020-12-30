@@ -37,8 +37,12 @@ public class AdminJobTitleSearchStepDef {
         */
 
        Driver.wait(10);
+       Driver.hoverClick(adminJobTitlesPage.selectDropdown);
 
-       Driver.hoverClick(adminJobTitlesPage.ItManagerJobTitle);
+
+
+
+        //Driver.hoverClick(adminJobTitlesPage.ItManagerJobTitle);
 
 
 

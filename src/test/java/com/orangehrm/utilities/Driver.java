@@ -257,6 +257,13 @@ public class Driver {
         select.selectByIndex(optionIndex);
         return select.getFirstSelectedOption();
     }
+
+    public static WebElement selectFromDropdown(Select select,String optionIndex) {
+
+
+        select.selectByValue(optionIndex);
+        return select.getFirstSelectedOption();
+    }
     /**
      * Clicks on an element using JavaScript
      *
