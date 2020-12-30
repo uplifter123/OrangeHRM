@@ -30,13 +30,9 @@ public class AdminJobTitleSearchStepDef {
 
 
 
-//        Select select = new Select(adminJobTitlesPage.selectDropdownlistButton);
-//        Driver.wait(2);
-//        select.selectByValue("10");
-//        System.out.println("Secili Kisim : "+ select.getFirstSelectedOption().getText());
 
 
-        */
+       
 
        Driver.wait(10);
        Driver.hoverClick(adminJobTitlesPage.selectDropdown);
@@ -44,26 +40,7 @@ public class AdminJobTitleSearchStepDef {
 
 
 
-        //Driver.hoverClick(adminJobTitlesPage.ItManagerJobTitle);
-
-
-
-        //Driver.scrollToElement(adminJobTitlesPage.ItManagerJobTitle);
-
-
-
-
-        //adminJobTitlesPage.ItManagerJobTitle.click();
-
-//
-//
-//        String expectedTitle=title;
-
-//        WebElement table= Driver.getDriver().findElement(By.xpath("//*[@id=\"jobTitlesDiv\"]/crud-panel/div/div/list/table"));
-//        System.out.println(table.getText());
-//
-//        String jobTable = table.getText();
-//        Assert.assertTrue(jobTable.contains(title));
+       
 
 
 
