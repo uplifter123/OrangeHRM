@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 public class AdminJobTitleSearchStepDef {
     AdminJobTitlesPage adminJobTitlesPage =new AdminJobTitlesPage();
@@ -25,24 +26,19 @@ public class AdminJobTitleSearchStepDef {
 
     }
 
-    @And("the user find {string} from the table")
-    public void theUserFindFromTheTable(String title) {
+    @And("the user find IT Manager from the table")
+    public void theUserFindFromTheTable() {
+
+       Driver.wait(10);
+       Driver.hoverClick(adminJobTitlesPage.selectDropdown);
+        Driver.wait(2);
+       adminJobTitlesPage.selectDropdownOpti10.click();
+        Driver.wait(2);
+       adminJobTitlesPage.rightClick.click();
 
 
-//        Select select = new Select(adminJobTitlesPage.selectDropdownlistButton);
-//        Driver.wait(2);
-//        select.selectByValue("10");
-//        System.out.println("Secili Kisim : "+ select.getFirstSelectedOption().getText());
 
-//
-//
-//        String expectedTitle=title;
 
-//        WebElement table= Driver.getDriver().findElement(By.xpath("//*[@id=\"jobTitlesDiv\"]/crud-panel/div/div/list/table"));
-//        System.out.println(table.getText());
-//
-//        String jobTable = table.getText();
-//        Assert.assertTrue(jobTable.contains(title));
 
 
 
