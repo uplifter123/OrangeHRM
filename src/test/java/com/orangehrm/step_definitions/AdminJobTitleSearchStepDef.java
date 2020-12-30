@@ -29,10 +29,12 @@ public class AdminJobTitleSearchStepDef {
     public void theUserFindFromTheTable(String title) {
 
 
-       /*Select select = new Select(adminJobTitlesPage.selectDropdownlistButton);
-        Driver.wait(2);
-        select.selectByValue("10");
-        System.out.println("Secili Kisim : "+ select.getFirstSelectedOption().getText());
+
+//        Select select = new Select(adminJobTitlesPage.selectDropdownlistButton);
+//        Driver.wait(2);
+//        select.selectByValue("10");
+//        System.out.println("Secili Kisim : "+ select.getFirstSelectedOption().getText());
+
 
         */
 
