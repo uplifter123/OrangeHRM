@@ -33,6 +33,12 @@ public WebElement ItManagerJobTitle;
     @FindBy(xpath= "//input[@class='select-dropdown']")
     public WebElement selectDropdown;
 
+    @FindBy(xpath= "//span[.='10']")
+    public WebElement selectDropdownOpti10;
+
+    @FindBy(xpath= "//a[@ng-click='list.nextPage()']")
+    public WebElement rightClick;
+
 
 
 

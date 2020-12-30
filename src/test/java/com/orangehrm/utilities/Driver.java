@@ -264,6 +264,10 @@ public class Driver {
         select.selectByValue(optionIndex);
         return select.getFirstSelectedOption();
     }
+    public static void selectFromDropdown10(Select select,String optionIndex) {
+        select.selectByValue(optionIndex);
+         select.getFirstSelectedOption().click();
+    }
     /**
      * Clicks on an element using JavaScript
      *

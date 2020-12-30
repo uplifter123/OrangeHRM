@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 public class AdminJobTitleSearchStepDef {
     AdminJobTitlesPage adminJobTitlesPage =new AdminJobTitlesPage();
@@ -25,23 +26,17 @@ public class AdminJobTitleSearchStepDef {
 
     }
 
-    @And("the user find {string} from the table")
-    public void theUserFindFromTheTable(String title) {
 
+    @And("the user find IT Manager from the table")
+    public void theUserFindFromTheTable() {
 
-
-
-
-       
 
        Driver.wait(10);
        Driver.hoverClick(adminJobTitlesPage.selectDropdown);
-
-
-
-
-       
-
+        Driver.wait(2);
+       adminJobTitlesPage.selectDropdownOpti10.click();
+        Driver.wait(2);
+       adminJobTitlesPage.rightClick.click();
 
 
     }
