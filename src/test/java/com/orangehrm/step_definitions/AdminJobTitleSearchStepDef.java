@@ -33,11 +33,13 @@ public class AdminJobTitleSearchStepDef {
 
     }
 
+
     @And("the user find job Title {string} from the table")
     public void theUserFindJobTitleFromTheTable(String jbTitle) {
 
-        Driver.wait(10);
-        Driver.hoverClick(adminJobTitlesPage.selectDropdown);
+       Driver.wait(10);
+       Driver.hoverClick(adminJobTitlesPage.selectDropdown);
+
         Driver.wait(2);
         adminJobTitlesPage.selectDropdownOpti10.click();
         Driver.wait(2);
@@ -65,8 +67,6 @@ public class AdminJobTitleSearchStepDef {
             Driver.waitAndClick(adminJobTitlesPage.rightClick, 2);
             Driver.wait(2);
         }
-
-
 
     }
 }
