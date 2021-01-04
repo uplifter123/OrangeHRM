@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
+
 public class AdminJobTitlesPage {
     public  AdminJobTitlesPage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -26,6 +29,38 @@ public class AdminJobTitlesPage {
 
     @FindBy(xpath= "//i[.='chevron_left']")
     public WebElement arrowLeftButton;
+
+    @FindBy(xpath= "//input[@class='select-dropdown']")
+    public WebElement selectDropdown;
+
+    @FindBy(xpath= "//span[.='10']")
+    public WebElement selectDropdownOpti10;
+
+    //li[@class='rows-per-page']
+
+    @FindBy(xpath= "//li[@class='rows-per-page']")
+    public WebElement rowsPerPage;
+
+    @FindBy(xpath= "//a[@ng-click='list.nextPage()']//i[.='chevron_right']")
+    public WebElement rightClick;
+
+    @FindBy(xpath= "//a[@ng-click='list.prevPage()']//i[.='chevron_left']")
+    public WebElement leftPageClick;
+
+    @FindBy(xpath ="//table/tbody//td[2]")  //span['""']  //table/tbody//td[2]/ng-include/span
+    public List<WebElement> allJobTitles;
+
+    @FindBy(id ="note")
+    public WebElement jobTitleNoteTextBox;
+
+    @FindBy(xpath = "//a[@form-name='jobTitlesModalForm']")
+    public WebElement jobTitleSaveButton;
+
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement successfullyMessage;
+
+
+
 
 
 

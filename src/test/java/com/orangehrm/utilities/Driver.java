@@ -94,6 +94,11 @@ public class Driver {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
     }
+
+    public static void hoverClick(WebElement element) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(element).click().perform();
+    }
     /**
      * return a list of string from a list of elements ignores any element with no
      * text
@@ -251,6 +256,17 @@ public class Driver {
         int optionIndex = 1 + random.nextInt(weblist.size() - 1);
         select.selectByIndex(optionIndex);
         return select.getFirstSelectedOption();
+    }
+
+    public static WebElement selectFromDropdown(Select select,String optionIndex) {
+
+
+        select.selectByValue(optionIndex);
+        return select.getFirstSelectedOption();
+    }
+    public static void selectFromDropdown10(Select select,String optionIndex) {
+        select.selectByValue(optionIndex);
+         select.getFirstSelectedOption().click();
     }
     /**
      * Clicks on an element using JavaScript
