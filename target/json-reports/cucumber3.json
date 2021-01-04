@@ -1,13 +1,47 @@
 [
   {
-    "line": 1,
+    "line": 3,
     "elements": [
       {
-        "start_timestamp": "2020-12-29T13:57:50.343Z",
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 49094627000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.orangehrm.step_definitions.LoginStep_Def.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: Cannot locate an element using id\u003dbtnLogin\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Kaufers-MacBook-Pro.local\u0027, ip: \u00272a02:908:4c17:5580:3494:c9b0:717d:81c8%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u002712.0.1\u0027\nDriver info: driver.version: RemoteWebDriver\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy20.click(Unknown Source)\n\tat com.orangehrm.step_definitions.LoginStep_Def.the_user_should_be_able_to_login_as_admin(LoginStep_Def.java:22)\n\tat ✽.the user should be able to login as admin(file:///Users/yilmaz/IdeaProjects/OrangeHRM/src/test/resources/features/02_AdminJobTitleSearch.feature:7)\n",
+              "duration": 3327107000,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "the user should be able to login as admin",
+            "match": {
+              "location": "com.orangehrm.step_definitions.LoginStep_Def.the_user_should_be_able_to_login_as_admin()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-30T15:03:40.303Z",
         "before": [
           {
             "result": {
-              "duration": 1007000,
+              "duration": 3370000,
               "status": "passed"
             },
             "match": {
@@ -15,15 +49,16 @@
             }
           }
         ],
-        "line": 3,
-        "name": "Login as admin",
+        "line": 9,
+        "name": "Find IT manager",
         "description": "",
-        "id": "user-should-be-able-to-login;login-as-admin",
+        "id": "user-should-be-able-to-find-any-job-title;find-it-manager",
         "after": [
           {
             "result": {
-              "duration": 1444622000,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d87.0.4280.88)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Kaufers-MacBook-Pro.local\u0027, ip: \u00272a02:908:4c17:5580:3494:c9b0:717d:81c8%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u002712.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/5c/y1zp5cjd5sn...}, goog:chromeOptions: {debuggerAddress: localhost:54865}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: f3c29224b50949eb0d288db6727fa0da\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)\n\tat com.orangehrm.utilities.Driver.getDriver(Driver.java:61)\n\tat com.orangehrm.step_definitions.Hooks.tearDown(Hooks.java:24)\n",
+              "duration": 13376000,
+              "status": "failed"
             },
             "match": {
               "location": "com.orangehrm.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
@@ -35,41 +70,62 @@
         "steps": [
           {
             "result": {
-              "duration": 9185339000,
-              "status": "passed"
+              "duration": 1544000,
+              "status": "skipped"
             },
-            "line": 4,
-            "name": "the user is on the login page",
+            "line": 10,
+            "name": "the user enter admin button",
             "match": {
-              "location": "com.orangehrm.step_definitions.LoginStep_Def.the_user_is_on_the_login_page()"
+              "location": "com.orangehrm.step_definitions.AdminJobTitleSearchStepDef.theUserEnterAdminButton()"
             },
-            "keyword": "Given "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 6568081000,
-              "status": "passed"
+              "duration": 510000,
+              "status": "skipped"
             },
-            "line": 5,
-            "name": "the user should be able to login as admin",
+            "line": 11,
+            "name": "the user should be able to click on Job and Jobtitle",
             "match": {
-              "location": "com.orangehrm.step_definitions.LoginStep_Def.the_user_should_be_able_to_login_as_admin()"
+              "location": "com.orangehrm.step_definitions.AdminJobTitleSearchStepDef.theUserShouldBeAbleToClickOnJobAndJobtitle()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 649000,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "the user find IT Manager from the table",
+            "match": {
+              "location": "com.orangehrm.step_definitions.AdminJobTitleSearchStepDef.theUserFindFromTheTable()"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@login"
+            "name": "@hxm"
           }
         ]
       }
     ],
-    "name": "User should be able to login",
+    "name": "User should be able to find any Job Title",
     "description": "",
-    "id": "user-should-be-able-to-login",
+    "id": "user-should-be-able-to-find-any-job-title",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Login.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/02_AdminJobTitleSearch.feature",
+    "tags": [
+      {
+        "name": "@hxm",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
