@@ -28,7 +28,7 @@ public class AdminJobTitlesPage {
     public WebElement arrowLeftButton;
 
     @FindBy(xpath = "//td[@class='cursor-pointer']//span[.='IT Manager']")
-public WebElement ItManagerJobTitle;
+    public WebElement ItManagerJobTitle;
 
     @FindBy(xpath= "//input[@class='select-dropdown']")
     public WebElement selectDropdown;
@@ -39,9 +39,14 @@ public WebElement ItManagerJobTitle;
     @FindBy(xpath= "//a[@ng-click='list.nextPage()']")
     public WebElement rightClick;
 
+    @FindBy(xpath = "//tbody/tr[22]/td[2]/ng-include[1]/span[1]")
+    public WebElement itManager;
 
+    @FindBy(xpath = "//tbody/tr[22]/td[1]/label[1]")
+    public WebElement checkIt;
 
-
+    //*[@id="modal1"]/form/div[2]/a[2]
+    //*[@id="jobTitleName"]
 
 
 
