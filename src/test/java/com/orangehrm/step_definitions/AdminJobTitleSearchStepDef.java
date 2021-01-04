@@ -5,8 +5,11 @@ import com.orangehrm.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.NoSuchElementException;
 
 public class AdminJobTitleSearchStepDef {
     AdminJobTitlesPage adminJobTitlesPage =new AdminJobTitlesPage();
@@ -31,13 +34,30 @@ public class AdminJobTitleSearchStepDef {
     public void theUserFindFromTheTable() {
 
 
-       Driver.wait(10);
-       Driver.hoverClick(adminJobTitlesPage.selectDropdown);
+        Driver.wait(10);
+        Driver.hoverClick(adminJobTitlesPage.selectDropdown);
         Driver.wait(2);
-       adminJobTitlesPage.selectDropdownOpti10.click();
+        System.out.println(adminJobTitlesPage.ItManagerJobTitle.isDisplayed());
+        adminJobTitlesPage.selectDropdownOpti10.click();
         Driver.wait(2);
-       adminJobTitlesPage.rightClick.click();
 
+        System.out.println(adminJobTitlesPage.ItManagerJobTitle.isDisplayed());
+
+
+
+      //  adminJobTitlesPage.ItManagerJobTitle
+       /* try{
+            while (!adminJobTitlesPage.ItManagerJobTitle.isDisplayed()){
+
+Driver.hoverClick(adminJobTitlesPage.clcknext);
+
+        }}
+        catch(NoSuchElementException e)
+        {
+        adminJobTitlesPage.ItManagerJobTitle.click();
+        }
+
+        */
 
     }
 
