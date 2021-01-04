@@ -21,10 +21,10 @@ public class Hooks {
 
 
         // Ekran görüntüsü almak için kullanılıyor. Ezbere gerek yok
-        final byte[] screenshot =  ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-        if(scenario.isFailed()){ //scenario basarisizsa calissin
-            scenario.embed(screenshot , "image/png");
-        }
+//        final byte[] screenshot =  ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+//        if(scenario.isFailed()){ //scenario basarisizsa calissin
+//            scenario.embed(screenshot , "image/png");
+//        }
 
         //  Driver.closeDriver();
     }

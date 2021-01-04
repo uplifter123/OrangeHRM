@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
+
 public class AdminJobTitlesPage {
     public  AdminJobTitlesPage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -27,26 +30,42 @@ public class AdminJobTitlesPage {
     @FindBy(xpath= "//i[.='chevron_left']")
     public WebElement arrowLeftButton;
 
-    @FindBy(xpath = "//td[@class='cursor-pointer']//span[.='IT Manager']")
-    public WebElement ItManagerJobTitle;
-
     @FindBy(xpath= "//input[@class='select-dropdown']")
     public WebElement selectDropdown;
 
     @FindBy(xpath= "//span[.='10']")
     public WebElement selectDropdownOpti10;
 
-    @FindBy(xpath= "//a[@ng-click='list.nextPage()']")
+    //li[@class='rows-per-page']
+
+    @FindBy(xpath= "//li[@class='rows-per-page']")
+    public WebElement rowsPerPage;
+
+    @FindBy(xpath= "//a[@ng-click='list.nextPage()']//i[.='chevron_right']")
     public WebElement rightClick;
 
-    @FindBy(xpath = "//tbody/tr[22]/td[2]/ng-include[1]/span[1]")
-    public WebElement itManager;
+    @FindBy(xpath= "//a[@ng-click='list.prevPage()']//i[.='chevron_left']")
+    public WebElement leftPageClick;
 
-    @FindBy(xpath = "//tbody/tr[22]/td[1]/label[1]")
-    public WebElement checkIt;
+    @FindBy(xpath ="//table/tbody//td[2]")  //span['""']  //table/tbody//td[2]/ng-include/span
+    public List<WebElement> allJobTitles;
 
-    //*[@id="modal1"]/form/div[2]/a[2]
-    //*[@id="jobTitleName"]
+    @FindBy(id ="note")
+    public WebElement jobTitleNoteTextBox;
+
+    @FindBy(xpath = "//a[@form-name='jobTitlesModalForm']")
+    public WebElement jobTitleSaveButton;
+
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement successfullyMessage;
+
+
+
+
+
+
+
+
 
 
 
