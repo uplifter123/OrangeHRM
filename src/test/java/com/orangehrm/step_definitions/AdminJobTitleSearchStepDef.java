@@ -26,8 +26,10 @@ public class AdminJobTitleSearchStepDef {
 
     }
 
+
     @And("the user find IT Manager from the table")
     public void theUserFindFromTheTable() {
+
 
        Driver.wait(10);
        Driver.hoverClick(adminJobTitlesPage.selectDropdown);
@@ -35,11 +37,6 @@ public class AdminJobTitleSearchStepDef {
        adminJobTitlesPage.selectDropdownOpti10.click();
         Driver.wait(2);
        adminJobTitlesPage.rightClick.click();
-
-
-
-
-
 
 
     }
