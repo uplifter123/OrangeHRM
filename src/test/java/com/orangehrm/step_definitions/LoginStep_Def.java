@@ -3,10 +3,8 @@ package com.orangehrm.step_definitions;
 import com.orangehrm.pages.LoginPage;
 import com.orangehrm.utilities.ConfigurationReader;
 import com.orangehrm.utilities.Driver;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 
 public class LoginStep_Def {
 
@@ -21,7 +19,9 @@ public class LoginStep_Def {
         LoginPage loginPage = new LoginPage();
         loginPage.loginButton.click();
 
+
     }
+
 
 
 }
