@@ -8,6 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 public class PayGradesStepDef {
     PayGradesPage payGradesPage = new PayGradesPage();
@@ -36,6 +37,8 @@ public class PayGradesStepDef {
     }
     @Then("the user verify that selected currency and Salary values")
     public void theUserVerifyThatSelectedCurrencyAndSalaryValues() {
+
+        Select select = new Select();
 
 
 
