@@ -23,7 +23,7 @@ public class PayGradesStepDef {
     public void the_user_clicks_add_Pay_Grades_and_assign_currency() {
         PayGradesPage payGradesPage = new PayGradesPage();
         payGradesPage.PlusSign.click();
-        payGradesPage.addPayGradesTextBox.sendKeys("G88");
+        payGradesPage.addPayGradesTextBox.sendKeys("GFX");
         payGradesPage.SaveButton.click();
 
 

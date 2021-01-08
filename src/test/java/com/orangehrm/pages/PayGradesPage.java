@@ -17,4 +17,7 @@ public class PayGradesPage {
     public WebElement SaveButton;
     @FindBy(xpath = "//*[@id=\"payGradesDiv\"]/crud-panel/div/div/list/table/tbody")
     public WebElement tbody;
+
+    //span[contains(text(),'Grade G4')]/parent::*/parent::*/following-sibling::td[2]
+
 }
