@@ -2,6 +2,7 @@ package com.orangehrm.step_definitions;
 
 import com.orangehrm.pages.AdminJobTitlesPage;
 import com.orangehrm.pages.PayGradesPage;
+import com.orangehrm.utilities.ConfigurationReader;
 import com.orangehrm.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -19,20 +20,27 @@ public class PayGradesStepDef {
         actions.click((payGradesPage.PayGradeButton)).build().perform();
     }
 
-    @When("the user clicks add Pay Grades and assign currency")
-    public void the_user_clicks_add_Pay_Grades_and_assign_currency() {
+    @When("the user clicks add Pay Grades and assign currency as {string}")
+    public void the_user_clicks_add_Pay_Grades_and_assign_currencya_as(String name) {
         PayGradesPage payGradesPage = new PayGradesPage();
         payGradesPage.PlusSign.click();
-        payGradesPage.addPayGradesTextBox.sendKeys("GFX");
+        payGradesPage.addPayGradesTextBox.sendKeys(name);
         payGradesPage.SaveButton.click();
+
+        Driver.wait(5);
+        ConfigurationReader.payGradeHoverClick(name);
+
+
 
 
     }
-
-
-
     @Then("the user verify that selected currency and Salary values")
     public void theUserVerifyThatSelectedCurrencyAndSalaryValues() {
+
+
+
+
+
     }
 
 

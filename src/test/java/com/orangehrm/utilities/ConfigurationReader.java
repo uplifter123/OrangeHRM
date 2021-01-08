@@ -34,6 +34,16 @@ public class ConfigurationReader {
         actions.moveToElement(viewButton).click().perform();
 
     }
+    public static void payGradeHoverClick(String payGrade){
+        //span[.='aaa']/parent::*/parent::*/following-sibling::td[2]
+        String beforeXpath="//span[.='";
+        String afterXpath="']/parent::*/parent::*/following-sibling::td[2]";
+        WebElement viewButton= Driver.getDriver().findElement(By.xpath(beforeXpath + payGrade + afterXpath));
+        //hover Element
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(viewButton).click().perform();
+
+    }
 
     public static String get(String keyName) {
         return properties.getProperty(keyName);

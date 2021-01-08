@@ -18,6 +18,23 @@ public class PayGradesPage {
     @FindBy(xpath = "//*[@id=\"payGradesDiv\"]/crud-panel/div/div/list/table/tbody")
     public WebElement tbody;
 
-    //span[contains(text(),'Grade G4')]/parent::*/parent::*/following-sibling::td[2]
+
+    @FindBy(xpath = "//button[@class='btn waves-effect ']")
+    public WebElement assignCurrency;
+
+    @FindBy(id = "currency_id")
+    public WebElement currencyDropDown;
+
+    @FindBy(id = "minSalary")
+    public WebElement minSalaryTextBox;
+
+    @FindBy(id = "maxSalary")
+    public WebElement maxSalaryTextBox;
+
+//    @FindBy(xpath = "//a[.='Save']")
+//    public WebElement currencySaveButton;
+//
+
+
 
 }
