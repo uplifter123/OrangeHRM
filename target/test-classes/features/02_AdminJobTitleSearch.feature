@@ -5,20 +5,14 @@ Feature: User should be able to find any Job Title
     Given the user is on the login page
     Then the user should be able to login as admin
 
-<<<<<<< HEAD
-  Scenario: Find IT manager
-    When the user enter admin button
-    Then the user should be able to click on Job and Jobtitle
-    And the user find IT Manager from the table
-=======
+
    Scenario Outline: Find IT manager
       When the user enter admin button
       Then the user should be able to click on Job and Jobtitle
       And the user find job Title "<Job Title>" from the table
      Examples:ZB
        | Job Title       |
-       #|IT Manager       |
+       |IT Manager       |
        #|Senior Manager IT|
-       |Traineex         |
+       #|Traineex         |
 
->>>>>>> refs/remotes/origin/master

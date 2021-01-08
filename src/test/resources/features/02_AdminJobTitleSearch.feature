@@ -12,7 +12,7 @@ Feature: User should be able to find any Job Title
       And the user find job Title "<Job Title>" from the table
      Examples:ZB
        | Job Title       |
-       #|IT Manager       |
+       |IT Manager       |
        #|Senior Manager IT|
-       |Traineex         |
+       #|Traineex         |
 
