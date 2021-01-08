@@ -11,7 +11,9 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/orangehrm/step_definitions",
+
         tags = "@wip,@login",
+
         dryRun = false
 )
 

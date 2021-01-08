@@ -6,6 +6,7 @@ import com.orangehrm.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -37,6 +38,7 @@ public class AdminJobTitleSearchStepDef {
     @And("the user find job Title {string} from the table")
     public void theUserFindJobTitleFromTheTable(String jbTitle) {
 
+
        Driver.wait(10);
        Driver.hoverClick(adminJobTitlesPage.selectDropdown);
 
@@ -47,6 +49,7 @@ public class AdminJobTitleSearchStepDef {
         while (adminJobTitlesPage.rightClick.isDisplayed()) {
                   List<WebElement> jobTitles = adminJobTitlesPage.allJobTitles;
                   List<String> titles = new ArrayList<String>();
+
 
             for (WebElement jobTitle : jobTitles) {
                  titles.add(jobTitle.getText());
@@ -62,6 +65,7 @@ public class AdminJobTitleSearchStepDef {
                 Driver.waitForVisibility(adminJobTitlesPage.successfullyMessage,3);
                 Assert.assertEquals("Successfully Updated",adminJobTitlesPage.successfullyMessage.getText());
 
+
                 break;
             }
             Driver.waitAndClick(adminJobTitlesPage.rightClick, 2);
@@ -70,3 +74,4 @@ public class AdminJobTitleSearchStepDef {
 
     }
 }
+
