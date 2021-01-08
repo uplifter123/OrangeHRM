@@ -27,20 +27,18 @@ public class PayGradesStepDef {
         payGradesPage.PlusSign.click();
         payGradesPage.addPayGradesTextBox.sendKeys(name);
         payGradesPage.SaveButton.click();
+        Driver.getDriver().navigate().refresh();
 
         Driver.wait(5);
         ConfigurationReader.payGradeHoverClick(name);
-
-
-
+Driver.hoverClick(payGradesPage.assignCurrency);
 
     }
     @Then("the user verify that selected currency and Salary values")
     public void theUserVerifyThatSelectedCurrencyAndSalaryValues() {
 
-        Select select = new Select();
-
-
+Select select = new Select(payGradesPage.currencyDropDown);
+select.selectByValue("string:TRL");
 
 
 
