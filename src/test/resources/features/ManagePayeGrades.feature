@@ -8,10 +8,11 @@ Feature: Admin should able to edit Payments
     When the user enter admin button
     And the user should be able to click on Job and Pay Grades
     And the user clicks add Pay Grades and assign currency as "<name>"
-    And the user edits and assign "<min>" ve "<max>" Salary
-    Then the user verify that selected currency "<curreency>" and Salary values
+    And the user edits "<currency>" and assign "<min>" ve "<max>" Salary
+    Then the user verify that selected currency and Salary values
     Examples:
-      | name | curreency          | min | max |
-      | G39  | TRL - Turkish Lira | 100 | 300 |
+      | name | currency                   | min | max |
+      | G39  | USD - United States Dollar | 100 | 700 |
+
     # | G13  | USD       | 50  | 150 |
 

@@ -22,7 +22,12 @@ public class PayGradesPage {
     @FindBy(xpath = "//button[@class='btn waves-effect ']")
     public WebElement assignCurrency;
 
-    @FindBy(id = "currency_id")
+
+    @FindBy(xpath = "//input[@class='select-dropdown ng-invalid']")
+            public WebElement dropdownClick;
+
+
+    @FindBy(xpath = "//input[@class='select-dropdown']")
     public WebElement currencyDropDown;
 
     @FindBy(id = "minSalary")
@@ -34,8 +39,10 @@ public class PayGradesPage {
 //    @FindBy(xpath = "//a[.='Save']")
 //    public WebElement currencySaveButton;
 
-@FindBy(xpath = "//input[@class='select-dropdown']")
-public WebElement assignCurrencyClick;
+        @FindBy(xpath = "//input[@class='select-dropdown']")
+        public WebElement assignCurrencyClick;
+
+
 
 
 

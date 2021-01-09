@@ -36,11 +36,11 @@ public class ConfigurationReader {
     }
 
     public static void currencyHoverClick(String currencyName){
-        //span[.='TRL - Turkish Lira']
+        //span[.='EUR - Euro']
         String beforeXpath="//span[.='";
-        String afterXpath="')]";
+        String afterXpath="']";
         WebElement viewButton= Driver.getDriver().findElement(By.xpath(beforeXpath + currencyName + afterXpath));
-        //hover Element
+        Driver.wait(2);
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(viewButton).click().perform();
 

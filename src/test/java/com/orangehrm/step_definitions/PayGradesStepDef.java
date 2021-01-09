@@ -33,24 +33,26 @@ public class PayGradesStepDef {
 
         Driver.wait(5);
         ConfigurationReader.payGradeHoverClick(name);
-Driver.hoverClick(payGradesPage.assignCurrency);
+        Driver.hoverClick(payGradesPage.assignCurrency);
 
     }
-    @Then("the user verify that selected currency and Salary values")
-    public void theUserVerifyThatSelectedCurrencyAndSalaryValues() {
-        Driver.getDriver().findElement(By.xpath("//input[@class='select-dropdown']")).click();
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(Driver.getDriver().findElement(By.xpath("//span[.='TRL - Turkish Lira']"))).click().perform();
-
-
-
-
-    }
-
 
     @And("the user edits {string} and assign {string} ve {string} Salary")
-    public void theUserEditsAndAssignVeSalary(String arg0, String arg1, String arg2) {
+    public void theUserEditsAndAssignVeSalary(String currency, String minSalary, String maxSalary) {
+            payGradesPage.assignCurrencyClick.click();
+            ConfigurationReader.currencyHoverClick(currency);
+            payGradesPage.minSalaryTextBox.sendKeys(minSalary);
+            Driver.wait(1);
+            payGradesPage.maxSalaryTextBox.sendKeys(maxSalary);
+            payGradesPage.SaveButton.click();
+
+    }
+
+    @Then("the user verify that selected currency and Salary values")
+    public void theUserVerifyThatSelectedCurrencyAndSalaryValues() {
+
 
 
     }
+
 }
