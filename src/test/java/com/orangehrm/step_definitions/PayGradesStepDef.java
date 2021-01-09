@@ -8,9 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
 public class PayGradesStepDef {
     PayGradesPage payGradesPage = new PayGradesPage();
@@ -36,7 +34,7 @@ public class PayGradesStepDef {
 Driver.hoverClick(payGradesPage.assignCurrency);
 
     }
-    @Then("the user verify that selected currency and Salary values")
+    @Then("the user verify that selected currency {string} and Salary values")
     public void theUserVerifyThatSelectedCurrencyAndSalaryValues() {
         Driver.getDriver().findElement(By.xpath("//input[@class='select-dropdown']")).click();
         Actions actions = new Actions(Driver.getDriver());
@@ -48,8 +46,8 @@ Driver.hoverClick(payGradesPage.assignCurrency);
     }
 
 
-    @And("the user edits {string} and assign {string} ve {string} Salary")
-    public void theUserEditsAndAssignVeSalary(String arg0, String arg1, String arg2) {
+    @And("the user edits and assign {string} ve {string} Salary")
+    public void theUserEditsAndAssignVeSalary(String arg1, String arg2) {
 
 
     }
