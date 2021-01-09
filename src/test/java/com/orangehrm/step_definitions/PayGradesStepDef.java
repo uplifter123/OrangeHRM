@@ -33,7 +33,18 @@ public class PayGradesStepDef {
         ConfigurationReader.payGradeHoverClick(name);
 Driver.hoverClick(payGradesPage.assignCurrency);
 
+
+
     }
+
+    @And("the user edits {string} and assign {string} ve {string} Salary")
+    public void theUserEditsAndAssignVeSalary(String arg0, String arg1, String arg2) {
+
+        payGradesPage.assignCurrencyClick.click();
+        ConfigurationReader.currencyHoverClick(arg0);
+
+    }
+
     @Then("the user verify that selected currency and Salary values")
     public void theUserVerifyThatSelectedCurrencyAndSalaryValues() {
         Driver.getDriver().findElement(By.xpath("//input[@class='select-dropdown']")).click();
@@ -46,9 +57,5 @@ Driver.hoverClick(payGradesPage.assignCurrency);
     }
 
 
-    @And("the user edits {string} and assign {string} ve {string} Salary")
-    public void theUserEditsAndAssignVeSalary(String arg0, String arg1, String arg2) {
 
-
-    }
 }
