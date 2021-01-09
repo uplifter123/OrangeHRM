@@ -22,7 +22,6 @@ public class PayGradesPage {
     @FindBy(xpath = "//button[@class='btn waves-effect ']")
     public WebElement assignCurrency;
 
-
     @FindBy(xpath = "//input[@class='select-dropdown ng-invalid']")
             public WebElement dropdownClick;
 
@@ -35,6 +34,12 @@ public class PayGradesPage {
 
     @FindBy(id = "maxSalary")
     public WebElement maxSalaryTextBox;
+
+    @FindBy(css = "input.select.dropdown")
+    public WebElement selectDropdown;
+
+    @FindBy(linkText = "Cancel")
+    public WebElement cancel;
 
 //    @FindBy(xpath = "//a[.='Save']")
 //    public WebElement currencySaveButton;

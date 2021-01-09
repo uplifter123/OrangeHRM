@@ -40,7 +40,7 @@ public class ConfigurationReader {
         String beforeXpath="//span[.='";
         String afterXpath="']";
         WebElement viewButton= Driver.getDriver().findElement(By.xpath(beforeXpath + currencyName + afterXpath));
-        Driver.wait(2);
+        Driver.wait(3);
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(viewButton).click().perform();
 
@@ -60,5 +60,14 @@ public class ConfigurationReader {
 
     }
 
+    public static WebElement payGradeCurrency(String payGrade){
+        //span[.='aaa']/parent::*/parent::*/following-sibling::td[2]
+        String beforeXpath="//span[.='";
+        String afterXpath="']";
+        WebElement viewButton= Driver.getDriver().findElement(By.xpath(beforeXpath + payGrade + afterXpath));
+        //hover Element
+        return viewButton;
+
+    }
 
 }

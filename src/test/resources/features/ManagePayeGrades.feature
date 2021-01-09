@@ -9,10 +9,13 @@ Feature: Admin should able to edit Payments
     And the user should be able to click on Job and Pay Grades
     And the user clicks add Pay Grades and assign currency as "<name>"
     And the user edits "<currency>" and assign "<min>" ve "<max>" Salary
-    Then the user verify that selected currency and Salary values
+    Then the user verify that selected currency and Salary values "<verifyCurrency>"
     Examples:
-      | name | currency                   | min | max |
-      | G39  | USD - United States Dollar | 100 | 700 |
+      | name | currency                   | min  | max  | verifyCurrency       |
+     # | F43  | USD - United States Dollar | 1000 | 7000 | United States Dollar |
+      | L43  | EUR - Euro                 | 1000 | 7000 | Euro                 |
+     #| L43  | TRL - Turkish Lira         | 1000 | 7000 | Turkish Lira         |
 
-    # | G13  | USD       | 50  | 150 |
 
+# Sonraki adimimiz birden fazla <name> girilebilmeli. Assert edilebilmeli,
+# sonra da excellden bir degeri otomatikman bu sayfaya verebilecek miyiz

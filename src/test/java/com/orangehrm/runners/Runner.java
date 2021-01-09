@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/orangehrm/step_definitions",
         tags = "@hxm",
-        dryRun = false
+        dryRun = true
 )
 
 public class Runner {
