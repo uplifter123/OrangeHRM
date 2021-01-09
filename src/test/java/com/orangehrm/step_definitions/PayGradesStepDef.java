@@ -7,6 +7,8 @@ import com.orangehrm.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -36,9 +38,10 @@ Driver.hoverClick(payGradesPage.assignCurrency);
     }
     @Then("the user verify that selected currency and Salary values")
     public void theUserVerifyThatSelectedCurrencyAndSalaryValues() {
+        Driver.getDriver().findElement(By.xpath("//input[@class='select-dropdown']")).click();
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(Driver.getDriver().findElement(By.xpath("//span[.='TRL - Turkish Lira']"))).click().perform();
 
-Select select = new Select(payGradesPage.currencyDropDown);
-select.selectByValue("string:TRL");
 
 
 
@@ -47,5 +50,7 @@ select.selectByValue("string:TRL");
 
     @And("the user edits {string} and assign {string} ve {string} Salary")
     public void theUserEditsAndAssignVeSalary(String arg0, String arg1, String arg2) {
+
+
     }
 }
