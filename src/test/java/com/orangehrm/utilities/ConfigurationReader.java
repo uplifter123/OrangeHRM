@@ -35,6 +35,17 @@ public class ConfigurationReader {
 
     }
 
+    public static void currencyHoverClick(String currencyName){
+        //span[.='EUR - Euro']
+        String beforeXpath="//span[.='";
+        String afterXpath="']";
+        WebElement viewButton= Driver.getDriver().findElement(By.xpath(beforeXpath + currencyName + afterXpath));
+        Driver.wait(2);
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(viewButton).click().perform();
+
+    }
+
 
 
 
