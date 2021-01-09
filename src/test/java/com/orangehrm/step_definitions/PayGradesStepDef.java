@@ -31,21 +31,29 @@ public class PayGradesStepDef {
 
         Driver.wait(5);
         ConfigurationReader.payGradeHoverClick(name);
-Driver.hoverClick(payGradesPage.assignCurrency);
+        Driver.hoverClick(payGradesPage.assignCurrency);
 
+    }
+
+    @And("the user edits {string} and assign {string} ve {string} Salary")
+    public void theUserEditsAndAssignVeSalary(String currency, String minSalary, String maxSalary) {
+
+        payGradesPage.dropdownClick.click();
+        Select select = new Select(payGradesPage.currencyDropDown);
+        Driver.wait(3);
+
+        select.selectByValue(currency);
+        //TRL - Turkish Lira
+
+        payGradesPage.minSalaryTextBox.sendKeys(minSalary);
+        Driver.wait(2);
+        payGradesPage.maxSalaryTextBox.sendKeys(maxSalary);
+        payGradesPage.SaveButton.click();
     }
     @Then("the user verify that selected currency and Salary values")
     public void theUserVerifyThatSelectedCurrencyAndSalaryValues() {
 
-Select select = new Select(payGradesPage.currencyDropDown);
-select.selectByValue("string:TRL");
-
-
 
     }
 
-
-    @And("the user edits {string} and assign {string} ve {string} Salary")
-    public void theUserEditsAndAssignVeSalary(String arg0, String arg1, String arg2) {
-    }
 }

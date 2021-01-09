@@ -12,6 +12,6 @@ Feature: Admin should able to edit Payments
     Then the user verify that selected currency and Salary values
     Examples:
       | name | curreency | min | max |
-      | G85 | TRY       | 100 | 300 |
+      | 8599 | TRL - Turkish Lira  | 100 | 300 |
     # | G13  | USD       | 50  | 150 |
 
