@@ -120,6 +120,10 @@ public class Driver {
             elemTexts.add(el.getText());
         }
         return elemTexts;
+
+
+
+
     }
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);

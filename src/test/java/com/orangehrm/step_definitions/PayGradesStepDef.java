@@ -4,7 +4,9 @@ import com.orangehrm.pages.AdminJobTitlesPage;
 import com.orangehrm.pages.PayGradesPage;
 import com.orangehrm.utilities.ConfigurationReader;
 import com.orangehrm.utilities.Driver;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class PayGradesStepDef {
@@ -26,14 +28,32 @@ public class PayGradesStepDef {
         payGradesPage.SaveButton.click();
         Driver.getDriver().navigate().refresh();
 
-        Driver.wait(5);
+       Driver.wait(5);
         ConfigurationReader.payGradeHoverClick(name);
-Driver.hoverClick(payGradesPage.assignCurrency);
-
+        Driver.hoverClick(payGradesPage.assignCurrency);
 
 
     }
 
+    @And("the user edits {string} and assign {string} ve {string} Salary")
+    public void theUserEditsAndAssignVeSalary(String currency, String minSalary, String maxSalary) {
+            payGradesPage.assignCurrencyClick.click();
+            ConfigurationReader.currencyHoverClick(currency);
+            payGradesPage.minSalaryTextBox.sendKeys(minSalary);
+            Driver.wait(1);
+            payGradesPage.maxSalaryTextBox.sendKeys(maxSalary);
+            payGradesPage.SaveButton.click();
 
+    }
+
+
+    @Then("the user verify that selected currency and Salary values {string}")
+    public void theUserVerifyThatSelectedCurrencyAndSalaryValues(String verifyCurrency) {
+
+        Driver.wait(2);
+        System.out.println("Currency degeri = "+ConfigurationReader.payGradeCurrency(verifyCurrency).getText());
+        Assert.assertTrue(ConfigurationReader.payGradeCurrency(verifyCurrency).getText().contains(verifyCurrency));
+
+    }
 
 }

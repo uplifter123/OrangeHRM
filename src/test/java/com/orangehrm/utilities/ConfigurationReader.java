@@ -36,11 +36,11 @@ public class ConfigurationReader {
     }
 
     public static void currencyHoverClick(String currencyName){
-        //span[.='TRL - Turkish Lira']
+        //span[.='EUR - Euro']
         String beforeXpath="//span[.='";
-        String afterXpath="')]";
+        String afterXpath="']";
         WebElement viewButton= Driver.getDriver().findElement(By.xpath(beforeXpath + currencyName + afterXpath));
-        //hover Element
+        Driver.wait(3);
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(viewButton).click().perform();
 
@@ -60,5 +60,14 @@ public class ConfigurationReader {
 
     }
 
+    public static WebElement payGradeCurrency(String payGrade){
+        //span[.='aaa']/parent::*/parent::*/following-sibling::td[2]
+        String beforeXpath="//span[.='";
+        String afterXpath="']";
+        WebElement viewButton= Driver.getDriver().findElement(By.xpath(beforeXpath + payGrade + afterXpath));
+        //hover Element
+        return viewButton;
+
+    }
 
 }
