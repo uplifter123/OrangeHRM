@@ -34,7 +34,7 @@ public class PayGradesStepDef {
 Driver.hoverClick(payGradesPage.assignCurrency);
 
     }
-    @Then("the user verify that selected currency {string} and Salary values")
+    @Then("the user verify that selected currency and Salary values")
     public void theUserVerifyThatSelectedCurrencyAndSalaryValues() {
         Driver.getDriver().findElement(By.xpath("//input[@class='select-dropdown']")).click();
         Actions actions = new Actions(Driver.getDriver());
@@ -46,8 +46,8 @@ Driver.hoverClick(payGradesPage.assignCurrency);
     }
 
 
-    @And("the user edits and assign {string} ve {string} Salary")
-    public void theUserEditsAndAssignVeSalary(String arg1, String arg2) {
+    @And("the user edits {string} and assign {string} ve {string} Salary")
+    public void theUserEditsAndAssignVeSalary(String arg0, String arg1, String arg2) {
 
 
     }
