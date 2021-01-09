@@ -4,10 +4,7 @@ import com.orangehrm.pages.AdminJobTitlesPage;
 import com.orangehrm.pages.PayGradesPage;
 import com.orangehrm.utilities.ConfigurationReader;
 import com.orangehrm.utilities.Driver;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 
 public class PayGradesStepDef {
@@ -32,25 +29,6 @@ public class PayGradesStepDef {
         Driver.wait(5);
         ConfigurationReader.payGradeHoverClick(name);
 Driver.hoverClick(payGradesPage.assignCurrency);
-
-
-
-    }
-
-    @And("the user edits {string} and assign {string} ve {string} Salary")
-    public void theUserEditsAndAssignVeSalary(String arg0, String arg1, String arg2) {
-
-        payGradesPage.assignCurrencyClick.click();
-        ConfigurationReader.currencyHoverClick(arg0);
-
-    }
-
-    @Then("the user verify that selected currency and Salary values")
-    public void theUserVerifyThatSelectedCurrencyAndSalaryValues() {
-        Driver.getDriver().findElement(By.xpath("//input[@class='select-dropdown']")).click();
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(Driver.getDriver().findElement(By.xpath("//span[.='TRL - Turkish Lira']"))).click().perform();
-
 
 
 
