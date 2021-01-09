@@ -4,10 +4,10 @@ import com.orangehrm.pages.AdminJobTitlesPage;
 import com.orangehrm.pages.PayGradesPage;
 import com.orangehrm.utilities.ConfigurationReader;
 import com.orangehrm.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
 public class PayGradesStepDef {
     PayGradesPage payGradesPage = new PayGradesPage();
@@ -33,12 +33,22 @@ public class PayGradesStepDef {
         Driver.hoverClick(payGradesPage.assignCurrency);
 
     }
+
+    @And("the user edits {string} and assign {string} ve {string} Salary")
+    public void theUserEditsAndAssignVeSalary(String currency, String minSalary, String maxSalary) {
+            payGradesPage.assignCurrencyClick.click();
+            ConfigurationReader.currencyHoverClick(currency);
+            payGradesPage.minSalaryTextBox.sendKeys(minSalary);
+            Driver.wait(1);
+            payGradesPage.maxSalaryTextBox.sendKeys(maxSalary);
+            payGradesPage.SaveButton.click();
+
+    }
+
     @Then("the user verify that selected currency and Salary values")
     public void theUserVerifyThatSelectedCurrencyAndSalaryValues() {
 
 
-        Select select = new Select(payGradesPage.currencyDropDown);
-        select.selectByValue("string:TRL");
-
     }
+
 }
