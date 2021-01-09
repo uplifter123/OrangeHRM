@@ -33,7 +33,9 @@ public class PayGradesPage {
 
 //    @FindBy(xpath = "//a[.='Save']")
 //    public WebElement currencySaveButton;
-//
+
+@FindBy(xpath = "//input[@class='select-dropdown']")
+public WebElement assignCurrencyClick;
 
 
 

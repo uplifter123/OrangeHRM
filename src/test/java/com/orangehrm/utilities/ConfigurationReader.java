@@ -35,6 +35,17 @@ public class ConfigurationReader {
 
     }
 
+    public static void currencyHoverClick(String currencyName){
+        //span[.='TRL - Turkish Lira']
+        String beforeXpath="//span[.='";
+        String afterXpath="')]";
+        WebElement viewButton= Driver.getDriver().findElement(By.xpath(beforeXpath + currencyName + afterXpath));
+        //hover Element
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(viewButton).click().perform();
+
+    }
+
 
 
 
