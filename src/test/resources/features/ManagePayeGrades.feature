@@ -1,8 +1,10 @@
 Feature: Admin should able to edit Payments
 
+
   Background:
     Given the user is on the login page
     Then the user should be able to login as admin
+
 
   Scenario Outline: Admin adds a payment
     When the user enter admin button
@@ -11,9 +13,9 @@ Feature: Admin should able to edit Payments
     And the user edits "<currency>" and assign "<min>" ve "<max>" Salary
     Then the user verify that selected currency and Salary values "<verifyCurrency>"
     Examples:
-      | name | currency                   | min  | max  | verifyCurrency       |
-     # | F43  | USD - United States Dollar | 1000 | 7000 | United States Dollar |
-      | L43  | EUR - Euro                 | 1000 | 7000 | Euro                 |
+      | name  | currency                   | min  | max  | verifyCurrency       |
+      | F43814 | USD - United States Dollar | 1000 | 7000 | United States Dollar |
+      | L44141 | EUR - Euro                 | 1000 | 7000 | Euro                 |
      #| L43  | TRL - Turkish Lira         | 1000 | 7000 | Turkish Lira         |
 
 

@@ -4,13 +4,15 @@ import com.orangehrm.pages.AdminJobTitlesPage;
 import com.orangehrm.pages.PayGradesPage;
 import com.orangehrm.utilities.ConfigurationReader;
 import com.orangehrm.utilities.Driver;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class PayGradesStepDef {
     PayGradesPage payGradesPage = new PayGradesPage();
+    protected static String currentUrl;
 
     @When("the user should be able to click on Job and Pay Grades")
     public void the_user_should_be_able_to_click_on_Job_and_Pay_Grades() {
@@ -23,6 +25,7 @@ public class PayGradesStepDef {
     @When("the user clicks add Pay Grades and assign currency as {string}")
     public void the_user_clicks_add_Pay_Grades_and_assign_currencya_as(String name) {
         PayGradesPage payGradesPage = new PayGradesPage();
+        this.currentUrl=Driver.getDriver().getCurrentUrl();
         payGradesPage.PlusSign.click();
         payGradesPage.addPayGradesTextBox.sendKeys(name);
         payGradesPage.SaveButton.click();
@@ -53,6 +56,10 @@ public class PayGradesStepDef {
         Driver.wait(2);
         System.out.println("Currency degeri = "+ConfigurationReader.payGradeCurrency(verifyCurrency).getText());
         Assert.assertTrue(ConfigurationReader.payGradeCurrency(verifyCurrency).getText().contains(verifyCurrency));
+
+        System.out.println(Driver.getDriver().getCurrentUrl());
+
+
 
     }
 

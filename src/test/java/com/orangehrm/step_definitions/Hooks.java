@@ -4,8 +4,6 @@ import com.orangehrm.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
     // Her senaryodan once çalışır.
@@ -26,7 +24,7 @@ public class Hooks {
 //            scenario.embed(screenshot , "image/png");
 //        }
 
-        //  Driver.closeDriver();
+          Driver.closeDriver();
     }
 
 
